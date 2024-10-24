@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <textarea [(ngModel)]="userInput" placeholder="Enter your question..."></textarea>
+  <button (click)="onSubmit()">Send</button>
+
+  <div *ngIf="chatResponse" class="response">
+    <p>Response: {{ chatResponse }}</p>
+  </div>
+
+  <div *ngIf="chatError" class="error">
+    <p>{{ chatError }}</p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+/* Estilos para o componente de upload */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+.alert {
+  margin-top: 15px;
+}
+
+.main {
+  z-index: 1; /* A área principal deve estar atrás do menu lateral */
+}
