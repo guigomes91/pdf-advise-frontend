@@ -9,4 +9,7 @@
   <div *ngIf="chatError" class="error">
     <p>{{ chatError }}</p>
   </div>
+
+  <!-- Componente de Loading -->
+  <app-loading *ngIf="isLoading"></app-loading>
 </div>
