@@ -1,4 +1,3 @@
-/* Estilos para o componente de upload */
 .sidebar {
   position: sticky;
   top: 0;
@@ -7,10 +6,49 @@
   z-index: 1000;
 }
 
-.alert {
-  margin-top: 15px;
+.main-content {
+  background-image: url('/assets/IARAG.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
-.main {
-  z-index: 1; /* A área principal deve estar atrás do menu lateral */
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Usar flexbox para centralização */
+  flex-direction: column; /* Direção em coluna para alinhar itens */
+  align-items: center; /* Centraliza itens horizontalmente */
+  justify-content: center; /* Centraliza itens verticalmente */
+  height: 100%; /* Para garantir que ocupe o espaço disponível */
+  max-width: 800px;
+  width: 100%;
+  margin-top: 5%;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+.info-panel {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 5%;
 }

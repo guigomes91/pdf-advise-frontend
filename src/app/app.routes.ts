@@ -6,7 +6,7 @@ import { ChatRoomComponent } from './chat/chat-room/chat-room.component';
 const routes: Routes = [
   { path: 'upload', component: UploadPdfComponent },
   { path: 'chat', component: ChatRoomComponent },
-  { path: '', redirectTo: '/chat', pathMatch: 'full' },
+  { path: '', redirectTo: '/upload', pathMatch: 'full' },
   { path: '**', redirectTo: '/upload' }
 ];
 

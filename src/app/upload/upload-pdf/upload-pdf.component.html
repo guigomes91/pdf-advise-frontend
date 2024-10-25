@@ -14,12 +14,39 @@
   </nav>
 
   <!-- Área Principal -->
-  <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
-    <h2>Upload PDF</h2>
-    <input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
-    <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
-    <div *ngIf="uploadError" class="alert alert-danger mt-2">
-      {{ uploadError }}
+  <main
+    class="col-md-9 ms-sm-auto col-lg-10 d-flex flex-column align-items-center justify-content-center main-content"
+  >
+    <div class="content-wrapper text-center">
+      <h2>Upload PDF</h2>
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+        accept="application/pdf"
+        class="mt-3"
+      />
+      <button
+        (click)="onUpload()"
+        [disabled]="!selectedFile"
+        class="btn btn-primary mt-3"
+      >
+        Upload
+      </button>
+      <div *ngIf="uploadError" class="alert alert-danger mt-2">
+        {{ uploadError }}
+      </div>
+    </div>
+
+    <!-- Painel Explicação RAG e Chroma -->
+    <div class="info-panel text-center">
+      <h4>O que é RAG e Chroma?</h4>
+      <p>
+        Retrieval-Augmented Generation (RAG) é uma técnica que combina a recuperação de informações
+        com modelos de geração de linguagem. Ele permite que as IA obtenham informações atualizadas
+        de fontes externas e utilizem esses dados para melhorar suas respostas. O banco de vetor
+        Chroma é uma poderosa ferramenta de armazenamento e recuperação de vetores de dados, permitindo
+        que informações sejam consultadas rapidamente com base em similaridade.
+      </p>
     </div>
   </main>
 </div>
