@@ -15,7 +15,7 @@ export class UploadPdfComponent {
   selectedFile: File | null = null;
   uploadError: string | null = null;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private readonly http: HttpClient, private readonly router: Router) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
