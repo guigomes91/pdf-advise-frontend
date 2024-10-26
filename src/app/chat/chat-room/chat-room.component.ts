@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 import { LoadingComponent } from '../../loading/loading.component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-chat-room',
   templateUrl: './chat-room.component.html',
   standalone: true,
-  imports: [FormsModule, CommonModule, LoadingComponent],
+  imports: [FormsModule, CommonModule, LoadingComponent, RouterModule],
   styleUrls: ['./chat-room.component.css']
 })
 export class ChatRoomComponent {
@@ -17,7 +19,10 @@ export class ChatRoomComponent {
   chatError: string = '';
   isLoading: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private readonly http: HttpClient,
+    private readonly router: Router
+  ) {}
 
   onSubmit(): void {
     this.isLoading = true;
@@ -35,5 +40,9 @@ export class ChatRoomComponent {
           this.isLoading = false;
         }
       });
+  }
+
+  goBack() {
+    this.router.navigate(['/upload']);
   }
 }

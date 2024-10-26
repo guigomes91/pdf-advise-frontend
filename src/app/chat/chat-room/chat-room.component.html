@@ -1,15 +1,41 @@
-<div class="container mt-4">
-  <textarea [(ngModel)]="userInput" placeholder="Enter your question..."></textarea>
-  <button (click)="onSubmit()">Send</button>
+<div class="d-flex flex-column align-items-center justify-content-center main-content">
+  <!-- Breadcrumb no topo -->
+  <nav aria-label="breadcrumb" class="breadcrumb-container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/upload">Upload</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Chat</li>
+    </ol>
+  </nav>
 
-  <div *ngIf="chatResponse" class="response">
-    <p>Response: {{ chatResponse }}</p>
-  </div>
+  <div class="content-wrapper text-center">
+    <!-- Botão de Voltar -->
+    <button (click)="goBack()" class="btn btn-secondary back-button mb-3">← Voltar</button>
 
-  <div *ngIf="chatError" class="error">
-    <p>{{ chatError }}</p>
+    <h2>Nossa melhor resposta vai aqui :)</h2>
+
+    <div class="chat-messages">
+      <!-- Mostra a resposta do chat, se disponível -->
+      <div *ngIf="chatResponse" class="response">
+        <p>Resposta: {{ chatResponse }}</p>
+      </div>
+      <!-- Mostra uma mensagem de erro, se disponível -->
+      <div *ngIf="chatError" class="error">
+        <p>{{ chatError }}</p>
+      </div>
+    </div>
+
+    <!-- Input de mensagem e botão de envio fixados na parte inferior -->
+    <div class="input-container">
+      <textarea
+        [(ngModel)]="userInput"
+        placeholder="Entre com sua questão..."
+        class="chat-input"
+      ></textarea>
+      <button (click)="onSubmit()" class="btn btn-primary">Send</button>
+    </div>
   </div>
 
   <!-- Componente de Loading -->
   <app-loading *ngIf="isLoading"></app-loading>
+  <router-outlet></router-outlet>
 </div>

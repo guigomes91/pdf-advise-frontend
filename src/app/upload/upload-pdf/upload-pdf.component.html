@@ -1,19 +1,4 @@
 <div class="d-flex">
-  <!-- Menu Lateral
-  <nav class="col-md-2 col-lg-2 bg-light sidebar">
-    <div class="position-sticky">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/upload">Upload PDF</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/chat">Chat</a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-
-  <!-- Sidebar  -->
   <nav id="sidebar">
     <div class="sidebar-header">
         <h3>MENU</h3>
@@ -21,10 +6,10 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="#" routerLink="/upload">Upload</a>
+            <a routerLink="/upload" routerLinkActive="active">Upload</a>
         </li>
         <li>
-            <a href="#" routerLink="/chat">Chat</a>
+            <a routerLink="/chat" routerLinkActive="active">Chat</a>
         </li>
     </ul>
     <ul class="list-unstyled CTAs">
@@ -72,5 +57,7 @@
         que informações sejam consultadas rapidamente com base em similaridade.
       </p>
     </div>
+
+    <router-outlet></router-outlet>
   </main>
 </div>

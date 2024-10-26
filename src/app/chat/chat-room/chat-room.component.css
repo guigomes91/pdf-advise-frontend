@@ -1,0 +1,83 @@
+.main-content {
+  background-image: url('/assets/IARAG.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.breadcrumb-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  height: 80vh; /* Altura para o conteúdo principal */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px; /* Compensar o breadcrumb */
+}
+
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat-messages {
+  overflow-y: auto;
+  max-height: calc(100% - 120px); /* Ajusta a altura para o campo de entrada */
+  padding-bottom: 15px;
+}
+
+.input-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  resize: none;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
