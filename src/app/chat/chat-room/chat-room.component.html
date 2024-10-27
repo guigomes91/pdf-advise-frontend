@@ -11,27 +11,23 @@
     <!-- Botão de Voltar -->
     <button (click)="goBack()" class="btn btn-secondary back-button mb-3">← Voltar</button>
 
-    <h2>Nossa melhor resposta vai aqui :)</h2>
-
+    <!-- Histórico de mensagens do chat -->
     <div class="chat-messages">
-      <!-- Mostra a resposta do chat, se disponível -->
-      <div *ngIf="chatResponse" class="response">
-        <p>Resposta: {{ chatResponse }}</p>
-      </div>
-      <!-- Mostra uma mensagem de erro, se disponível -->
-      <div *ngIf="chatError" class="error">
-        <p>{{ chatError }}</p>
+      <div *ngFor="let message of chatHistory" class="response">
+        <p>{{ message.timestamp }} - G7E Advisor (Resposta): {{ message.response }}</p>
       </div>
     </div>
 
-    <!-- Input de mensagem e botão de envio fixados na parte inferior -->
-    <div class="input-container">
-      <textarea
-        [(ngModel)]="userInput"
-        placeholder="Entre com sua questão..."
-        class="chat-input"
-      ></textarea>
-      <button (click)="onSubmit()" class="btn btn-primary">Send</button>
+    <!-- Título e Input de mensagem na parte inferior -->
+    <div class="input-section">
+      <div class="input-container">
+        <textarea
+          [(ngModel)]="userInput"
+          placeholder="Entre com sua questão..."
+          class="chat-input"
+        ></textarea>
+        <button (click)="onSubmit()" class="btn btn-primary">Send</button>
+      </div>
     </div>
   </div>
 

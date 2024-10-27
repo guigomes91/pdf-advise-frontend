@@ -17,11 +17,13 @@ a:focus {
 }
 
 #sidebar {
+  position: relative;
   min-width: 250px;
   max-width: 250px;
   background: #7386D5;
   color: #fff;
   transition: all 0.3s;
+  text-align: center;
 }
 
 #sidebar.active {
@@ -36,6 +38,7 @@ a:focus {
 #sidebar ul.components {
   padding: 20px 0;
   border-bottom: 1px solid #47748b;
+  text-align: center;
 }
 
 #sidebar ul p {
@@ -47,6 +50,7 @@ a:focus {
   padding: 10px;
   font-size: 1.1em;
   display: block;
+  text-align: center;
 }
 
 #sidebar ul li a:hover {
@@ -80,19 +84,19 @@ ul ul a {
 
 ul.CTAs {
   padding: 20px;
+  width: 100%; /* Ocupa a largura total do sidebar */
+  text-align: center;
 }
 
 ul.CTAs a {
-  text-align: center;
   font-size: 0.9em !important;
   display: block;
   border-radius: 5px;
   margin-bottom: 5px;
-}
-
-a.download {
-  background: #fff;
-  color: #7386D5;
+  color: #fff !important;
+  background: #6d7fcc;
+  text-align: center;
+  padding: 10px;
 }
 
 a.article,
@@ -101,15 +105,13 @@ a.article:hover {
   color: #fff !important;
 }
 
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
   #sidebar {
-      margin-left: -250px;
+    margin-left: -250px;
   }
   #sidebar.active {
-      margin-left: 0;
-  }
-  #sidebarCollapse span {
-      display: none;
+    margin-left: 0;
   }
 }
 
@@ -151,11 +153,40 @@ button {
 }
 
 .info-panel {
-  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9em !important;
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
   max-width: 800px;
   margin-bottom: 5%;
+}
+
+h3 {
+  color: #fff !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2, h4, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Peso mais leve */
+  color: #333; /* Ajuste a cor conforme desejado */
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0.1%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.sidebar-footer .footer-image {
+  max-width: 100%;
+  height: auto;
+  width: 150px;
+  display: block;
 }

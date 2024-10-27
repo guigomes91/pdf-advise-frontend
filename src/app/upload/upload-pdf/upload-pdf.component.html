@@ -20,6 +20,9 @@
         <a href="https://www.linkedin.com/in/guilherme-goomess/" target="_blank">Linkedin</a>
     </li>
   </ul>
+  <div class="sidebar-footer">
+    <img src="assets/DALL-E_G7E.png" alt="Logo" class="footer-image">
+  </div>
 </nav>
 
   <!-- Área Principal -->
@@ -58,6 +61,8 @@
       </p>
     </div>
 
+    <!-- Componente de Loading -->
+    <app-loading *ngIf="isLoading"></app-loading>
     <router-outlet></router-outlet>
   </main>
 </div>

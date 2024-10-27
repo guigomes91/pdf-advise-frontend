@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="loading-overlay">
       <div class="loading-spinner"></div>
-      <p>Loading...</p>
+      <p>Estamos analisando e obtendo a melhor resposta...</p>
     </div>
   `,
   styles: [`
@@ -21,11 +21,11 @@ import { Component } from '@angular/core';
       justify-content: center;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.8);
-      z-index: 9999; /* Certifique-se de que está acima de outros elementos */
+      z-index: 9999;
     }
     .loading-spinner {
-      border: 8px solid #f3f3f3; /* Cor do fundo */
-      border-top: 8px solid #3498db; /* Cor do spinner */
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
       border-radius: 50%;
       width: 40px;
       height: 40px;
